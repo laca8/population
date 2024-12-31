@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm i && cd backend && npm install",
-    "start": "cd backend && node index.js",
+    "build": "cd backend && npm install  && cd ../client && npm install",
+    "server": "node backend/index.js",
     "client": "npm run dev --prefix  client",
     "dev": "concurrently \"npm run server \" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client"
